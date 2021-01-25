@@ -16,6 +16,7 @@ SoundCloudAPI.getTrack = function(inputValue) {
     SC.get('/tracks', {
         q: inputValue
       }).then(function(tracks) {
+          console.log(tracks);
 
         // removing existing data
         var searchResult = document.querySelector('.js-search-results');
@@ -31,7 +32,7 @@ SoundCloudAPI.getTrack = function(inputValue) {
 SoundCloudAPI.renderTracks = function(tracks) {
 
     tracks.forEach(track => {
-        // console.log(track);
+        console.log(track);
 
         
         // To get good quality thumbnail
@@ -39,7 +40,7 @@ SoundCloudAPI.renderTracks = function(tracks) {
             SC.oEmbed(track.permalink_url , {
             // auto_play: true
             }).then(function(embed){
-            // console.log('oEmbed response: ', embed);                
+            console.log('oEmbed response: ', embed);                
             
             var card = document.createElement("div");
             card.classList.add("card");
