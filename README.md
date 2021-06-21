@@ -1,1 +1,1 @@
-A todo list using ReactJS with functionalities like Adding, Deleting, Updating, Delete-All and Mark-as-Done.
+A music player using SounCloud API and SDK. Deployed to Netlify.
